@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/com/pdc/ws/dao/EntidadeID.java=UTF-8
+encoding//src/com/pdc/ws/dao/Filial.java=UTF-8
+encoding//src/com/pdc/ws/dao/Pessoa.java=UTF-8
+encoding//src/com/pdc/ws/dao/PessoaDAO.java=UTF-8
+encoding//src/com/pdc/ws/dao/PessoaDAOPortBindingStub.java=UTF-8
+encoding//src/com/pdc/ws/dao/PessoaDAOService.java=UTF-8
+encoding//src/com/pdc/ws/dao/PessoaDAOServiceLocator.java=UTF-8
+encoding//src/com/pdc/ws/dao/TipoPessoa.java=UTF-8
