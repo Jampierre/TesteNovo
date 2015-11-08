@@ -1,6 +1,11 @@
 eclipse.preferences.version=1
 encoding//src/com/pdc/ws/dao/EntidadeID.java=UTF-8
+encoding//src/com/pdc/ws/dao/Exception.java=UTF-8
 encoding//src/com/pdc/ws/dao/Filial.java=UTF-8
+encoding//src/com/pdc/ws/dao/FilialDAO.java=UTF-8
+encoding//src/com/pdc/ws/dao/FilialDAOPortBindingStub.java=UTF-8
+encoding//src/com/pdc/ws/dao/FilialDAOService.java=UTF-8
+encoding//src/com/pdc/ws/dao/FilialDAOServiceLocator.java=UTF-8
 encoding//src/com/pdc/ws/dao/Pessoa.java=UTF-8
 encoding//src/com/pdc/ws/dao/PessoaDAO.java=UTF-8
 encoding//src/com/pdc/ws/dao/PessoaDAOPortBindingStub.java=UTF-8

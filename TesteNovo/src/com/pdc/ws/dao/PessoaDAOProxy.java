@@ -50,6 +50,36 @@ public class PessoaDAOProxy implements com.pdc.ws.dao.PessoaDAO {
     return pessoaDAO.pessoaJaFezCompra(arg0);
   }
   
+  public java.lang.Boolean alterarPessoa(com.pdc.ws.dao.Pessoa arg0) throws java.rmi.RemoteException{
+    if (pessoaDAO == null)
+      _initPessoaDAOProxy();
+    return pessoaDAO.alterarPessoa(arg0);
+  }
+  
+  public com.pdc.ws.dao.Pessoa autenticarPessoa(java.lang.String email, java.lang.String senha) throws java.rmi.RemoteException{
+    if (pessoaDAO == null)
+      _initPessoaDAOProxy();
+    return pessoaDAO.autenticarPessoa(email, senha);
+  }
+  
+  public java.lang.Boolean verificarCPF(java.lang.String arg0) throws java.rmi.RemoteException{
+    if (pessoaDAO == null)
+      _initPessoaDAOProxy();
+    return pessoaDAO.verificarCPF(arg0);
+  }
+  
+  public com.pdc.ws.dao.Pessoa[] listarCliente() throws java.rmi.RemoteException{
+    if (pessoaDAO == null)
+      _initPessoaDAOProxy();
+    return pessoaDAO.listarCliente();
+  }
+  
+  public java.lang.Boolean cadastrarPessoa(com.pdc.ws.dao.Pessoa arg0) throws java.rmi.RemoteException{
+    if (pessoaDAO == null)
+      _initPessoaDAOProxy();
+    return pessoaDAO.cadastrarPessoa(arg0);
+  }
+  
   public com.pdc.ws.dao.Pessoa getPessoa(java.lang.Long arg0) throws java.rmi.RemoteException{
     if (pessoaDAO == null)
       _initPessoaDAOProxy();
@@ -60,36 +90,6 @@ public class PessoaDAOProxy implements com.pdc.ws.dao.PessoaDAO {
     if (pessoaDAO == null)
       _initPessoaDAOProxy();
     return pessoaDAO.deletarPessoa(arg0);
-  }
-  
-  public java.lang.Boolean cadastrarPessoa(com.pdc.ws.dao.Pessoa arg0) throws java.rmi.RemoteException{
-    if (pessoaDAO == null)
-      _initPessoaDAOProxy();
-    return pessoaDAO.cadastrarPessoa(arg0);
-  }
-  
-  public java.lang.Boolean alterarPessoa(com.pdc.ws.dao.Pessoa arg0) throws java.rmi.RemoteException{
-    if (pessoaDAO == null)
-      _initPessoaDAOProxy();
-    return pessoaDAO.alterarPessoa(arg0);
-  }
-  
-  public com.pdc.ws.dao.Pessoa[] listarCliente() throws java.rmi.RemoteException{
-    if (pessoaDAO == null)
-      _initPessoaDAOProxy();
-    return pessoaDAO.listarCliente();
-  }
-  
-  public java.lang.Boolean verificarCPF(java.lang.String arg0) throws java.rmi.RemoteException{
-    if (pessoaDAO == null)
-      _initPessoaDAOProxy();
-    return pessoaDAO.verificarCPF(arg0);
-  }
-  
-  public com.pdc.ws.dao.Pessoa autenticarPessoa(java.lang.String email, java.lang.String senha) throws java.rmi.RemoteException{
-    if (pessoaDAO == null)
-      _initPessoaDAOProxy();
-    return pessoaDAO.autenticarPessoa(email, senha);
   }
   
   

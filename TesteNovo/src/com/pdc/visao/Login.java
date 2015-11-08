@@ -13,6 +13,7 @@ import javax.swing.border.EmptyBorder;
 import com.pdc.ws.dao.Pessoa;
 import com.pdc.ws.dao.PessoaDAO;
 import com.pdc.ws.dao.PessoaDAOProxy;
+import com.pdc.ws.dao.TipoPessoa;
 
 public class Login extends BaseView {
 	private static final long serialVersionUID = 1L;
@@ -46,8 +47,8 @@ public class Login extends BaseView {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 372, 214);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		
 		JButton btnEntrar = new JButton("Entrar");
@@ -60,7 +61,15 @@ public class Login extends BaseView {
 					JOptionPane.showInternalMessageDialog(contentPane, "Login ou senha inválidos");
 				}else{
 					BaseView.setUsuarioLogado(p);
-					new Geral().setVisible(true);
+					if (p.getTipo() == TipoPessoa.ADM) {
+						// TODO IMPLEMENTAR
+					}
+					if (p.getTipo() == TipoPessoa.OPERADOR) {
+						new Geral().setVisible(true);
+					}
+					if (p.getTipo() == TipoPessoa.CLIENTE) {
+						new CrudFilial().setVisible(true);
+					}
 					setVisible(false);
 				}
 			} catch (Exception e1) {
