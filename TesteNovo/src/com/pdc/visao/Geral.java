@@ -1,6 +1,5 @@
 package com.pdc.visao;
 
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ContainerAdapter;
@@ -16,7 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class Geral extends JFrame {
+public class Geral extends BaseView {
 
 	/**
 	 * 
@@ -24,27 +23,7 @@ public class Geral extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
-	
 	private static JPanel panel1; 
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-		panel1 = new JPanel ();
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Geral frame = new Geral();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	public void panel1(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -57,10 +36,8 @@ public class Geral extends JFrame {
 		menuBar.add(mnCliente);
 		
 		JMenuItem mntmCadastrar = new JMenuItem("Cadastrar");
-		mntmCadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
+		mntmCadastrar.addActionListener(e ->{
+			JOptionPane.showMessageDialog(this, getUsuarioLogado().getNome());
 		});
 		mntmCadastrar.addContainerListener(new ContainerAdapter() {
 			@Override
@@ -117,12 +94,8 @@ public class Geral extends JFrame {
 		menuBar.add(mnCliente);
 		
 		JMenuItem mntmCadastrar = new JMenuItem("Cadastrar");
-		mntmCadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("ENtrou");
-				panel1();
-				panel1.setVisible(true);
-			}
+		mntmCadastrar.addActionListener(e ->{
+			JOptionPane.showMessageDialog(this, getUsuarioLogado().getNome());
 		});
 		mntmCadastrar.addContainerListener(new ContainerAdapter() {
 			@Override
@@ -153,8 +126,6 @@ public class Geral extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		
 	}
 
 	/**

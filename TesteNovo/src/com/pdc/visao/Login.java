@@ -15,10 +15,6 @@ import com.pdc.ws.dao.PessoaDAO;
 import com.pdc.ws.dao.PessoaDAOProxy;
 
 public class Login extends BaseView {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textField;
@@ -64,6 +60,8 @@ public class Login extends BaseView {
 					JOptionPane.showInternalMessageDialog(contentPane, "Login ou senha inválidos");
 				}else{
 					BaseView.setUsuarioLogado(p);
+					new Geral().setVisible(true);
+					setVisible(false);
 				}
 			} catch (Exception e1) {
 				e1.printStackTrace();
