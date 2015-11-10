@@ -65,7 +65,7 @@ public class Login extends BaseView {
 						// TODO IMPLEMENTAR
 					}
 					if (p.getTipo() == TipoPessoa.OPERADOR) {
-						new Geral().setVisible(true);
+						new ViewOperador().setVisible(true);
 					}
 					if (p.getTipo() == TipoPessoa.CLIENTE) {
 						new CrudFilial().setVisible(true);
